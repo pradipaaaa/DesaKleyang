@@ -1,0 +1,215 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-brand-brown: #574325;
+    --color-brand-lime: #B1C827;
+    --color-brand-tan: #CBB086;
+    --color-brand-steel: #838F99;
+    --color-brand-orange: #FF9B00;
+    --color-brand-green: #1D401F;
+    --color-brand-olive: #BBAF4D;
+    --color-brand-cream: #FCF2DB;
+
+    --color-green-primary: #1D401F;
+    --color-green-dark: #574325;
+    --color-green-light: #FCF2DB;
+    --color-green-50: #FCF2DB;
+    --color-green-100: #F4E4C7;
+    --color-green-200: #CBB086;
+    --color-green-300: #BBAF4D;
+    --color-green-400: #B1C827;
+    --color-green-500: #6F7E28;
+    --color-green-600: #1D401F;
+    --color-green-700: #163218;
+    --color-green-800: #102512;
+    --color-green-900: #0A170B;
+
+    --color-emerald-50: #FCF2DB;
+    --color-emerald-100: #F4E4C7;
+    --color-emerald-200: #CBB086;
+    --color-emerald-300: #BBAF4D;
+    --color-emerald-400: #B1C827;
+    --color-emerald-500: #6F7E28;
+    --color-emerald-600: #1D401F;
+    --color-emerald-700: #163218;
+    --color-emerald-800: #102512;
+
+    --color-lime-50: #FCF2DB;
+    --color-lime-100: #F4E4C7;
+    --color-lime-200: #E1CD88;
+    --color-lime-300: #BBAF4D;
+    --color-lime-400: #B1C827;
+    --color-lime-500: #98AD22;
+    --color-lime-600: #6F7E28;
+    --color-lime-700: #574325;
+
+    --color-amber-50: #FCF2DB;
+    --color-amber-100: #F4E4C7;
+    --color-amber-200: #F6D482;
+    --color-amber-300: #FFBC45;
+    --color-amber-400: #FF9B00;
+    --color-amber-500: #FF9B00;
+    --color-amber-600: #B86F00;
+    --color-amber-700: #574325;
+
+    --color-orange-50: #FCF2DB;
+    --color-orange-100: #FFE1AD;
+    --color-orange-200: #FFC66B;
+    --color-orange-300: #FFB02E;
+    --color-orange-400: #FF9B00;
+    --color-orange-500: #FF9B00;
+    --color-orange-600: #C47700;
+    --color-orange-700: #574325;
+
+    --color-blue-100: #E6ECEF;
+    --color-blue-200: #C7D0D6;
+    --color-blue-300: #A6B3BC;
+    --color-blue-400: #838F99;
+    --color-blue-500: #6D7882;
+    --color-blue-600: #574325;
+    --color-blue-700: #1D401F;
+
+    --color-purple-100: #F5EBDD;
+    --color-purple-200: #CBB086;
+    --color-purple-700: #574325;
+
+    --color-teal-100: #ECF0D1;
+    --color-teal-200: #BBAF4D;
+    --color-teal-700: #1D401F;
+
+    --color-gray-50: #FCF2DB;
+    --color-gray-100: #F5EBDD;
+    --color-gray-200: #E4D5BD;
+    --color-gray-300: #CBB086;
+    --color-gray-400: #838F99;
+    --color-gray-500: #6F777D;
+    --color-gray-600: #574325;
+    --color-gray-700: #3F321F;
+    --color-gray-800: #2D2418;
+    --color-gray-900: #1D401F;
+
+    --color-slate-50: #FCF2DB;
+    --color-slate-100: #F5EBDD;
+    --color-slate-200: #E4D5BD;
+    --color-slate-300: #CBB086;
+    --color-slate-400: #838F99;
+    --color-slate-500: #6F777D;
+    --color-slate-600: #574325;
+    --color-slate-700: #3F321F;
+    --color-slate-800: #2D2418;
+    --color-slate-900: #1D401F;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #FCF2DB;
+}
+::-webkit-scrollbar-thumb {
+    background: #1D401F;
+    border-radius: 10px;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(29, 64, 31, 0.88) 0%, rgba(87, 67, 37, 0.78) 100%);
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation active link */
+.nav-active {
+    color: #1D401F;
+    border-bottom: 2px solid #B1C827;
+}
+
+/* Prose styling for news content */
+.prose-village p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #574325;
+}
+
+.prose-village h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1D401F;
+}
+
+/* Table responsive */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+/* Alert transition */
+.alert-dismissible {
+    animation: fadeInUp 0.4s ease;
+}
+
+/* Sidebar active */
+.sidebar-active {
+    background: linear-gradient(90deg, #1D401F, #574325);
+    color: white;
+}
