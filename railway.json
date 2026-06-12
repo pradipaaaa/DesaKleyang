@@ -4,8 +4,7 @@
     "buildCommand": "npm run build"
   },
   "deploy": {
-    "preDeployCommand": "php artisan migrate --force",
-    "startCommand": null,
+    "preDeployCommand": null,
     "healthcheckPath": "/",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3
