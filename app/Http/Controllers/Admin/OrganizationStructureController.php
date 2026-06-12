@@ -11,8 +11,8 @@ class OrganizationStructureController extends Controller
 {
     public function index()
     {
-        $structures = OrganizationStructure::latest()->paginate(10);
-        return view('admin.organization.index', compact('structures'));
+        $organizations = OrganizationStructure::latest()->paginate(10);
+        return view('admin.organization.index', compact('organizations'));
     }
 
     public function create()
